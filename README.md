@@ -1,7 +1,7 @@
 # Black Jack
 
 **Black Jack card game with python**
-![Milestone Project 2]("C:\Users\hebba\Downloads\Blackjack-values.png")
+![Milestone Project 2](Blackjack-values.png)
 
 ## Project Goals
 * You need to create a simple text-based [BlackJack](https://en.wikipedia.org/wiki/Blackjack) game
