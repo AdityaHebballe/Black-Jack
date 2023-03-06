@@ -1,6 +1,6 @@
 # Black Jack
 
-**Black Jack card game with python**
+
 ![Milestone Project 2](Blackjack-values.png)
 
 ## Project Goals
