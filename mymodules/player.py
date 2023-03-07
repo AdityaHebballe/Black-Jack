@@ -14,5 +14,5 @@ class Table:
         self.dealer=
 
     def display(self):
-        dealer=
+        dealer=()
 
