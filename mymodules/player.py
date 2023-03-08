@@ -1,5 +1,5 @@
-class Player:
-    def __init__(self,total=100,betting):
+class Betting:
+    def __init__(self,betting,total=100):
         self.total=total
         self.betting=betting
 
@@ -8,11 +8,6 @@ class Player:
             self.total=-self.betting
         elif worl=='w':
             self.total=+self.betting
-        
-class Table:
-    def __init__(self,dealer,player):
-        self.dealer=
-
-    def display(self):
-        dealer=()
+    
+    
 
