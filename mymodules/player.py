@@ -1,4 +1,4 @@
-class Betting:
+class Chips:
     def __init__(self):
         self.total=100
         self.betting=0
