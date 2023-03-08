@@ -3,10 +3,10 @@ class Betting:
         self.total=100
         self.betting=0
 
-    def bet(worl):
-        if worl=='l':
-            self.total=-self.betting
-        elif worl=='w':
-            self.total=+self.betting
+    def win_bet(self):
+        self.total += self.betting
+    
+    def lose_bet(self):
+        self.total -= self.betting
     
 
