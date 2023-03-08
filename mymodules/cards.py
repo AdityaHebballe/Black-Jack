@@ -3,7 +3,6 @@ import random
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
 values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8, 'Nine':9, 'Ten':10, 'Jack':10,'Queen':10, 'King':10, 'Ace':11}
-
 class Cards:
     
     def __init__(self,suit,rank):
@@ -14,41 +13,22 @@ class Cards:
     def __str__(self) -> str:
         return f"{self.rank} of {self.suit}"
     
-    
+
+
+
 class Deck:
     suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
     ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
     values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8, 'Nine':9, 'Ten':10, 'Jack':10,'Queen':10, 'King':10, 'Ace':11}
-    
     def __init__(self):
         self.deck=[]
         for suit in suits:
             for rank in ranks:
                 self.deck.append(Cards(suit,rank))
-
+    
     def shuffle(self):
         self.deck.shuffle()
-    
-    def deal(self):
-        single_card=self.deck.pop()
-        return single_card
     
     def __str__(self):
         for cards in self.deck:
             return f"{cards.suit} of {cards.rank}"
-        
-
-class Table:
-    def __init__(self):
-        self.table_cards=[]
-        self.aces=0
-        self.value=0
-    
-    def add_card(self,card):
-           self.table_cards.append(card)
-           self.value+=card.value
-           
-    def adjust_for_ace():
-        while self.aces!=0 and self.value:
-            self.aces-=1
-            self.aces-=10
