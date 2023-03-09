@@ -31,7 +31,7 @@ class Deck:
         return single_card
     
     def shuffle(self):
-        self.deck.shuffle()
+        random.shuffle(self.deck)
     
     def __str__(self):
         for cards in self.deck:
@@ -46,8 +46,8 @@ class Table:
     def show_player():
         print(self.cards)
     
-    def show_dealer()
-        print(x /n self.cards[-1])
+    def show_dealer():
+        print(f"{x} /n {self.cards[-1]}")
     
     def add_card(self,card):
         self.cards.append(card)
