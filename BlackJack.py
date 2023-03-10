@@ -3,7 +3,6 @@ from mymodules.cards import Cards
 from mymodules.cards import Deck
 from mymodules.player import Chips
 from mymodules.cards import Table
-from IPython.display import clear_output
 
 def ask_bet(chips):
     while True:
@@ -22,18 +21,20 @@ def hit(player,deck):
     player.add_card(deck.deal())
     player.adjust_for_ace()
 
-def hit_or_stand(player,dealer):
+def hit_or_stand(player,deck,dealer):
+    global playing
     while True:
         try:
-            x=input("hit or stand")
+            x=input("Hit or Stand: ")
             if x.startswith('h'):
-                hit(player=player)
+                hit(player=player,deck=deck)
             elif x.startswith('s'):
-                print('\nDealer playing')
-                hit(player=dealer)
+                print('\n Dealer playing')
+                playing=False
+                hit(player=dealer,deck=deck)
     
         except:
-            print("Sorry try again")
+            print("sorry try again")
             continue
         else:
             break
@@ -42,7 +43,7 @@ def hit_or_stand(player,dealer):
 def ask_bet(chips):
     while True:
         try:
-            chips.betting=int(input("Enter how much to bet"))
+            chips.betting=int(input("Enter how much to bet: "))
         
         except:
             print("Enter a valid integer")
@@ -70,7 +71,7 @@ while game_on:
     player.show_player()
     
     while playing:
-        hit_or_stand(player=player,dealer=dealer)
+        hit_or_stand(player=player,dealer=dealer,deck=new_deck)
         dealer.show_dealer_half()
         player.show_player()
         if player.value>21:
