@@ -3,6 +3,7 @@
 
 ![Milestone Project 2](Blackjack-values.png)
 
+
 ## Project Goals
 * You need to create a simple text-based [BlackJack](https://en.wikipedia.org/wiki/Blackjack) game
 * The game needs to have one player versus an automated dealer.
