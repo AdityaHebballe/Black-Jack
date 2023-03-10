@@ -52,8 +52,8 @@ def ask_bet(chips):
             break
     
 playing=True
-game_on=True
-while game_on:
+
+while True:
     new_deck=Deck()
     new_deck.shuffle()
     player=Table()
@@ -77,7 +77,6 @@ while game_on:
         if player.value>21:
             print("\n    Player Busts")
             chips.lose_bet()
-            playing=False
             break
             
     if player.value<=21:
@@ -92,7 +91,6 @@ while game_on:
             player.show_player
             print(" \n    Dealer Busts")
             chips.win_bet()
-            break
         
         elif player.value>dealer.value:
             print("\n    Player wins")
@@ -106,13 +104,12 @@ while game_on:
             print("\nDealer and Player Tie")
             
     print(f"\nPlayer chips currently {chips.total}")
-    chips=chips.total
     new_game = input("Would you like to play another hand? Enter 'y' or 'n' ")
     
     if new_game[0].lower()=='y':
+        playing=True
         continue
     
     else:
         print("Thanks for playing!")
-        game_on=False
         break
