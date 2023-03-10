@@ -46,14 +46,20 @@ class Table:
     
     def show_player(self):
 
-        print("Player's Cards: \n")
+        print("\nPlayer's Cards: \n")
         for c in range(0,len(self.cards)):
             print(self.cards[c])  
     
-    def show_dealer(self):
-        print("Dealer's Cards: \n")
+    def show_dealer_half(self):
+        print("\nDealer's Cards: \n")
         print("<card hidden>")
         for b in range(1,len(self.cards)):
+            print(self.cards[b])
+        print('\n')
+    
+    def show_dealer_full(self):
+        print("\nDealer's Cards: \n")
+        for b in range(0,len(self.cards)):
             print(self.cards[b])
         print('\n')
     
